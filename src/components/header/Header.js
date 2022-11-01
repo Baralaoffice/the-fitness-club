@@ -5,9 +5,18 @@ import Join from "./Join";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
+  header: {
+    background: "none !important",
+    zIndex: "999",
+    padding: "19px 8px 0",
+    boxShadow: "none !important",
+    position: "relative !important",
+    top: "0",
+    left: "0",
+  },
   row: {
     justifyContent: "space-between",
-    background: 'linear-gradient(45deg, rgb(253 120 43 / 69%) 30%, #4a4c51 50%, #f48916 90%)',
+    // background: 'linear-gradient(45deg, rgb(253 120 43 / 69%) 30%, #4a4c51 50%, #f48916 90%)',
   },
   logo: {
     height: "3rem",
