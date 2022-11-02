@@ -43,8 +43,8 @@ const Figures = () => {
   const classes = useStyles();
   return (
     <Box className={classes.row}>
-      {data.map((item, id) => (
-        <Box className={classes.col}>
+      {data.map((item, i) => (
+        <Box key={i} className={classes.col}>
           <Typography>{item.count}</Typography>
           <span>{item.name}</span>
         </Box>
