@@ -1,8 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
-// import Programdata from "../../data/programdata";
-// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Programdata from "../../data/programdata";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const usestyles = makeStyles({
     program: {
@@ -80,7 +80,7 @@ const Program = () => {
                 <Typography>PROGRAMS</Typography>
                 <Typography>SHAPE YOU</Typography>
             </Box>
-            {/* <Box className={classes.program_box}>
+            <Box className={classes.program_box}>
                 {Programdata.map((item, id) => (
                     <Box key={id} className={classes.col}>
                         <Box className={classes.box_img}>
@@ -93,7 +93,7 @@ const Program = () => {
                         </Button>
                     </Box>
                 ))}
-            </Box> */}
+            </Box>
         </Box>
     );
 };
