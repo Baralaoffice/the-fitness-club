@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../components/banner/Banner";
-// import Program from "../components/programs/Program";
+import Program from "../components/programs/Program";
 import { makeStyles } from '@mui/styles';
 
 const usestyles = makeStyles({
@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className={classes.Home}>
       <Banner />
-      {/* <Program/> */}
+      <Program/>
     </div>
   );
 };
