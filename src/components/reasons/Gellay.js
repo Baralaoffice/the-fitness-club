@@ -1,18 +1,47 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { makeStyles } from "@mui/styles";
+
+const usestyles = makeStyles({
+  gellary:{
+    paddingRight:'2rem !important'
+  },
+  row: {
+    "&:nth-child(1)": {
+      gridColumnEnd: 'span 2 !important',
+      gridRowEnd: 'span 2 !important',
+    },
+    "&:nth-child(2)": {
+      gridColumnEnd: 'span 4 !important',
+      gridRowEnd: 'span 1 !important',
+    },
+     "&:nth-child(3)": {
+      gridColumnEnd: 'span 2 !important',
+      gridRowEnd: 'span 1 !important',
+    },
+    "&:nth-child(4)": {
+      gridColumnEnd: 'span 2 !important',
+      gridRowEnd: 'span 1 !important',
+    },
+    
+  }
+
+})
 
 
-
-const  Gellary = () => {
+const Gellary = () => {
+  const classes = usestyles();
   return (
     <ImageList
+      className={classes.gellary}
       variant="quilted"
-      cols={4}
+      cols={6}
       rowHeight={'auto'}
+      gap={"1rem"}
     >
-      {itemData.map((item ,i) => (
-        <ImageListItem key={i} cols={2}>
+      {itemData.map((item, i) => (
+        <ImageListItem key={i} cols={2} className={classes.row}>
           <img
             src={item.img}
             alt={item.title}

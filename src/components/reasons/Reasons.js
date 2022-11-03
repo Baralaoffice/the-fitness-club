@@ -21,7 +21,7 @@ const usestyles = makeStyles({
     display: "flex",
     padding: "0 2rem",
     width: "100%",
-    gap:'25px',
+    gap: "2rem",
   },
   col: {
     width: "100%",
@@ -29,7 +29,7 @@ const usestyles = makeStyles({
   },
   col_con: {
     fontWeight: 400,
-    color:'#fff',
+    color: "#fff",
     "& span": {
       color: " #f48915",
       fontWeight: "700",
@@ -39,22 +39,29 @@ const usestyles = makeStyles({
       lineHeight: "1.167",
       letterSpacing: "0em",
       fontWeight: 700,
-      marginTop:'1rem'
+      marginTop: "1rem",
     },
   },
-  list:{
+  list: {
     "&  p": {
-        fontSize: "1rem",
-        lineHeight: "1.167",
-        letterSpacing: "0em",
-        fontWeight: 700,
-    color:'#fff',
-
-      },
-    "& img":{
-        height: '2rem',
-        width: '2rem',
-    }
+      fontSize: "1rem",
+      lineHeight: "1.167",
+      letterSpacing: "0em",
+      fontWeight: 700,
+      color: "#fff",
+    },
+    "& ul li":{
+      paddingLeft:'0'
+    },
+    "& img": {
+      height: "2rem",
+      width: "2rem",
+    },
+  },
+  imglist:{
+    display: 'flex',
+    padding: '1.5rem 0',
+    gap: '1rem',
   }
 });
 const Reasons = () => {
@@ -96,6 +103,12 @@ const Reasons = () => {
                   <ListItemText secondary="RELIABLE PARTNERS" />
                 </ListItem>
               </List>
+            </Box>
+            <Typography style={{color: '#9c9c9c',fontWeight: 'normal',}}>OUR PARTNERS</Typography>
+            <Box className={classes.imglist}>
+              <img src="./img/download (3).png" alt="aa" />
+              <img src="./img/download (4).png" alt="aa" />
+              <img src="./img/download (5).png" alt="aa" />
             </Box>
           </Box>
         </Box>
