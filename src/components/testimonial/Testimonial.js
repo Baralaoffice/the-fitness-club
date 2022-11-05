@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useState } from "react";
 import TestimonialsData from "../../data/TestimonialsData";
@@ -90,13 +90,11 @@ const usestyles = makeStyles({
       width: '1.5rem',
       display: 'block',
     },
-
-
   }
 });
 
 const Testimonial = () => {
-  const [selector, setselector] = useState(0)
+  const [selector, setselector] = useState(0);
   const Tleanth = TestimonialsData.length;
 
   const classes = usestyles();
