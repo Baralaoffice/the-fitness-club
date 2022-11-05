@@ -4,6 +4,7 @@ import Program from "../components/programs/Program";
 import { makeStyles } from '@mui/styles';
 import Reasons from "../components/reasons/Reasons";
 import Plans from "../components/palne/Plans";
+import Testimonial from "../components/testimonial/Testimonial";
 
 const usestyles = makeStyles({
   Home: {
@@ -23,6 +24,7 @@ const Home = () => {
       <Program/>
       <Reasons/>
       <Plans/>
+      <Testimonial/>
     </div>
   );
 };
