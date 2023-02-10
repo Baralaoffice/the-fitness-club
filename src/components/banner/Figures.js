@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import CountUp from 'react-countup';
 
 const useStyles = makeStyles({
   row: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles({
       color: " #fff",
       fontSize: "2rem",
     },
-    "& span":{
+    "& >span":{
         color:'#9c9c9c'
     }
   },
@@ -26,15 +27,15 @@ const useStyles = makeStyles({
 
 const data = [
   {
-    count: "+ 140",
+    count:  <CountUp end={140} start={90}/>,
     name: "EXPERT COACHES",
   },
   {
-    count: "+ 978",
+    count:  <CountUp end={978} start={600}/>,
     name: "MEMBERS JOINED",
   },
   {
-    count: "+ 50",
+    count: <CountUp end={50} start={20}/>,
     name: "FITNESS PROGRAMS",
   },
 ];
@@ -45,7 +46,7 @@ const Figures = () => {
     <Box className={classes.row}>
       {data.map((item, i) => (
         <Box key={i} className={classes.col}>
-          <Typography>{item.count}</Typography>
+          <Typography>+{item.count}</Typography>
           <span>{item.name}</span>
         </Box>
       ))}

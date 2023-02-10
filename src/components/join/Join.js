@@ -1,6 +1,7 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
+import React,{ useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const usestyles = makeStyles({
   join: {
@@ -50,6 +51,7 @@ const usestyles = makeStyles({
       color: "#d9d9d9",
       fontSize: "0.8rem",
       width: "12rem",
+      padding:' 8px 5px'
     },
     "& Button": {
       background: "#f48915",
@@ -65,6 +67,18 @@ const usestyles = makeStyles({
 });
 
 const Join = () => {
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_54esh5q', 'template_065ujbn', form.current, 'aqbqRXpOJtZzGdYcq')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   const classes = usestyles();
   return (
     <Box className={classes.join}>
@@ -76,15 +90,13 @@ const Join = () => {
           </Typography>
         </Box>
         <Box className={classes.col}>
-          <Box className={classes.form}>
-            <TextField
-              type="Email"
-              //   id="my-input"
+          <form ref={form} onSubmit={sendEmail} className={classes.form}>
+            <input type="email" name="user_email"
               placeholder="Enter your Email Address here..."
               variant="outlined"
             />
-            <Button>Join now</Button>
-          </Box>
+           <Button type="submit" value="Join now" >Join now</Button>
+          </form>
         </Box>
       </Box>
     </Box>
